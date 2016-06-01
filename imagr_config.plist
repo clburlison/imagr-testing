@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+		<key>background_image</key>
+		<string>https://github.com/clburlison/imagr-testing/raw/master/pics/vintage.jpg</string>
+    <key>workflows</key>
+    <array>
+      <dict>
+        <key>name</key>
+        <string>Clayton's TESTER</string>
+        <key>restart_action</key>
+        <string>none</string>
+        <key>description</key>
+        <string>The oh-noes did Clayton screw something up test workflow
+with all the fun pits and pieces...
+
+IE - Mostly file:// and http:// requests.</string>
+        <key>components</key>
+        <array>
+<!-- packages - 'http' (both DMG and PKG) -->
+          <dict>
+            <key>type</key>
+            <string>package</string>
+            <key>url</key>
+            <string>https://github.com/clburlison/imagr-testing/blob/master/pkgs/clearReg.dmg?raw=true</string>
+            <key>first_boot</key>
+            <false/>
+          </dict>
+          <dict>
+            <key>type</key>
+            <string>package</string>
+            <key>url</key>
+            <string>https://github.com/clburlison/imagr-testing/blob/master/pkgs/clearReg.dmg?raw=true</string>
+            <key>first_boot</key>
+            <true/>
+          </dict>
+          <dict>
+            <key>type</key>
+            <string>package</string>
+            <key>url</key>
+            <string>https://github.com/clburlison/imagr-testing/blob/master/pkgs/admin_user.pkg?raw=true</string>
+            <key>first_boot</key>
+            <false/>
+          </dict>
+          <dict>
+            <key>type</key>
+            <string>package</string>
+            <key>url</key>
+            <string>https://github.com/clburlison/imagr-testing/blob/master/pkgs/admin_user.pkg?raw=true</string>
+            <key>first_boot</key>
+            <true/>
+          </dict>
+<!-- packages - 'file' (both DMG and PKG) -->
+          <dict>
+            <key>type</key>
+            <string>package</string>
+            <key>url</key>
+            <string>file:///Users/Shared/imagr/pkgs/clearReg.dmg</string>
+            <key>first_boot</key>
+            <false/>
+          </dict>
+          <dict>
+            <key>type</key>
+            <string>package</string>
+            <key>url</key>
+            <string>file:///Users/Shared/imagr/pkgs/clearReg.dmg</string>
+            <key>first_boot</key>
+            <true/>
+          </dict>
+          <dict>
+            <key>type</key>
+            <string>package</string>
+            <key>url</key>
+            <string>file:///Users/Shared/imagr/pkgs/admin_user.pkg</string>
+            <key>first_boot</key>
+            <false/>
+          </dict>
+          <dict>
+            <key>type</key>
+            <string>package</string>
+            <key>url</key>
+            <string>file:///Users/Shared/imagr/pkgs/admin_user.pkg</string>
+            <key>first_boot</key>
+            <true/>
+          </dict>
+<!-- scripts - 'http' -->
+          <dict>
+            <key>type</key>
+            <string>script</string>
+            <key>url</key>
+            <string>http://localhost/imagr/scripts/dummy_say.sh</string>
+            <key>first_boot</key>
+            <false/>
+          </dict>
+          <dict>
+            <key>type</key>
+            <string>script</string>
+            <key>url</key>
+            <string>file:///Users/Shared/imagr/scripts/dummy_say.sh</string>
+            <key>first_boot</key>
+            <true/>
+          </dict>
+<!-- scripts - 'file' -->
+          <dict>
+            <key>type</key>
+            <string>script</string>
+            <key>url</key>
+            <string>file:///Users/Shared/imagr/scripts/dummy_say.sh</string>
+            <key>first_boot</key>
+            <false/>
+          </dict>
+          <dict>
+            <key>type</key>
+            <string>script</string>
+            <key>url</key>
+            <string>file:///Users/Shared/imagr/scripts/dummy_say.sh</string>
+            <key>first_boot</key>
+            <true/>
+          </dict>
+<!-- scripts - embed using all the imagr variables -->
+          <dict>
+              <key>type</key>
+              <string>script</string>
+              <key>content</key>
+              <string>#!/bin/bash
+          echo "[default]" > "{{target_volume}}/test.conf"
+          echo "Serial={{serial_number}}" >> "{{target_volume}}/test.conf"
+          echo "Machine_model={{machine_model}}" >> "{{target_volume}}/test.conf"</string>
+              <key>first_boot</key>
+              <false/>
+          </dict>
+        </array>
+      </dict>
+    </array>
+  </dict>
+</plist>
