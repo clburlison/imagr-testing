@@ -13,12 +13,15 @@
           <false/>
           <key>components</key>
           <array>
-              <dict>
-                  <key>type</key>
-                  <string>package</string>
-                  <key>url</key>
-                  <string>https://raw.githubusercontent.com/clburlison/imagr-testing/master/pkgs/sleeper-1.0.pkg</string>
-              </dict>
+            <dict>
+              <key>type</key>
+              <string>script</string>
+              <key>content</key>
+              <string>#!/bin/bash
+echo "{{target_volume}}"</string>
+              <key>first_boot</key>
+              <false/>
+            </dict>
           </array>
       </dict>
     </array>
