@@ -17,7 +17,7 @@
                   <key>type</key>
                   <string>package</string>
                   <key>url</key>
-                  <string>https://github.com/clburlison/imagr-testing/blob/master/pkgs/sleeper-1.0.pkg?raw=true</string>
+                  <string>https://raw.githubusercontent.com/clburlison/imagr-testing/master/pkgs/sleeper-1.0.pkg</string>
               </dict>
           </array>
       </dict>
